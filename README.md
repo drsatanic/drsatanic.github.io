@@ -1,6 +1,6 @@
-# REPOSITORY ARCHIVED
-
-**Note:** This repository has been archived and is no longer actively maintained. It is kept for historical reference only. No further updates or changes will be made to this codebase.
+> [!WARNING]
+> This repository is no longer supported or updated by [h-enk](https://github.com/h-enk). If you wish to continue to develop this code yourself, we recommend you fork it.
 
 # simply-cyan
+
 Port of the Simply Cyan theme for Jekyll
