@@ -1,54 +1,78 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+locale: "en-US"
+title: "SATANIC DEVIL"
+email: "drsamael@zohomail.cn"
+description: "Modified Fairytale of A Mythical Fallen"
+url: "https://drsatanic.github.io"
+baseurl: "/"
+repository: "drsatanic/drsatanic.github.io"
+logo: "assets/images/logo.jpg"
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: MM
-email:
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-twitter_username: username
-github_username: username
-minimal_mistakes_skin: default
+twitter_username: ""
+github_username: "drsatanic"
+
+remote_theme: "mmistakes/minimal-mistakes@master"
+minimal_mistakes_skin: "dirt"
 search: true
 
-# Build settings
 markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
-# Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+highlighter: rough
+paginate: 5
+paginate_path: "/page/:num/"
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: "as_char"
+  toc_levels: 1..6
+  smart_quotes: "lsquo,rsquo,ldquo,rdquo"
+  enable_coderay: false
+
+sass:
+  sass_dir: "_sass"
+  style: "compressed"
+  
+pagination:
+  enabled: true
+    debug: false
+  collection: "posts"
+  per_page: 10
+  permalink: "/page/:num/"
+  title: ":title - page :num"
+  limit: 0
+  sort_field: "date"
+  sort_reverse: true
+  category: "posts"
+  tag: ""
+  locale: ""
+  trail:
+    before: 2
+    after: 2
+timezone: "Europe/London"
 
 include:
+  - .htaccess
   - _pages
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - package.json
+  - Rakefike
+  - README
+  
+keep_files:
+  - .git
+  - .svn
 
-# Plugins (previously gems:)
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+  
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -57,40 +81,48 @@ plugins:
   - jemoji
   - jekyll-include-cache
 
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+
 author:
-  name   : "First Lastname"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  name   : "Doctor Samael"
+  avatar : "assets/images/avatar.png"
+  bio    : "Did you really seen the Title?"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://"
+      url: "https://drsatanic.github.io"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/drsatanic"
+    - label: "Mastodon"
+      icon: "fab fa-fw fa-mastodon"
+      url: "https://mstdn.plus/@luciferous"
 
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+    - label: "Email"
+      icon: "fab fa-fw fa-envelope-square"
+      url: "mailto:drsamael@zohomail.cn"
+    - label: "Bear"
+      icon: "fab fa-fw fa-link"
+      url: "https://drsamael.bearblog.dev/"
+    - label: "Blogger"
+      icon: "fab fa-fw fa-blog"
+      url: "https://drsamael.blogspot.com/"
 
 defaults:
   # _posts
   - scope:
-      path: ""
+      path: "_posts"
       type: posts
     values:
       layout: single
